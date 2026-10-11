@@ -6,3 +6,25 @@ __pycache__/
 .pytest_cache/
 _dev/
 .ipynb_checkpoints/
+
+# Редакторы и ОС
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
+# Артефакты и сборка
+$null
+*.keras
+*.h5
+*.egg-info/
+dist/
+build/
+
+# Учебные файлы и внутренние доки (не для публикации)
+l.py
+LS3.py
+Homework_1.py
+PRINCIPLES.md
+README_clipbridge.md
+

@@ -42,6 +42,12 @@ def app(tk_root, monkeypatch):
         "digit_app.ui.messagebox.showerror",
         lambda *a, **kw: None,
     )
+    # Герметичность: список моделей не зависит от реальной папки models/
+    # (иначе тест падает, если пользователь сохранил модели локально)
+    monkeypatch.setattr(
+        "digit_app.ui.list_models",
+        lambda *a, **kw: [],
+    )
     a = App(tk_root)
     yield a
     # Останавливаем возможные потоки
